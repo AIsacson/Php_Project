@@ -4,17 +4,17 @@ namespace MVC\Controller;
 
 use MVC\Model\UserModel;
 use MVC\Integration\DB;
-//use MVC\Model\Comments;
+use MVC\Model\Comments;
 
 class Controller {
     private $usermodel;
     private $db;
-    //private $commentsmodel;
+    private $commentsmodel;
     
     function __construct(){
         $this->usermodel = new UserModel();
         $this->db = new DB();
-        //$this->commentsmodel = new Comments();
+        $this->commentsmodel = new Comments();
     }
     
     function setUser ($username, $password) {
@@ -26,15 +26,15 @@ class Controller {
     }
     
     function setComment($username, $message, $select){
-        $this->usermodel->setComment($username, $message, $select, $this->db->connect());
+        $this->commentsmodel->setComment($username, $message, $select, $this->db->connect());
     }
     
-    function getComments($username, $select) {
-        $this->usermodel->getComments($username, $select, $this->db->connect());
+    function getComments($username, $select, $selectDelete) {
+        $this->commentsmodel->getComments($username, $select, $selectDelete,$this->db->connect());
     }
     
     function deleteComment($cid, $select){
-        $this->usermodel->deleteComment($cid, $select, $this->db->connect());
+        $this->commentsmodel->deleteComment($cid, $select, $this->db->connect());
     }
 }
 

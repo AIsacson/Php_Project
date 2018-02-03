@@ -26,7 +26,7 @@
     				<a class="dropbtn">Recipes</a>
     				<div class="dropdown-content">
                                     <a href="MeatballsHandler">Swedish Meatballs</a>
-      					<a href="PancakesHandler">Pancakes</a>
+                                    <a href="PancakesHandler">Pancakes</a>
     				</div>
                                 </li>
                             <li><a href="SignupHandler" class="dropbtn">Signup</a></li>
@@ -36,6 +36,7 @@
 		<div class="header">
                     <img src="../../resources/images/pancakes1920.jpg" alt="A picture of delicious pancakes">
 		</div>
+                <br>
 		<div class="content">
 			<div class="recipetitle">
 				<h1>Pancakes</h1>
@@ -71,16 +72,16 @@
 			<br>
                 </div>
                 <?php
-                if(isset($_SESSION['id'])) {
-                echo "<form method='POST' action='".setComments($conn)."'>
-                    <input type='hidden' name='username' value='".$_SESSION['id']."'>
-                    <textarea name='message'></textarea><br>
-                    <button name='commentSubmit' type='submit'>Comment</button>
-                </form>";
+                if($this->session->get('id') > 0) {
+                    echo "<form method='POST' action='SetCommentHandler2'>
+                            <input type='hidden' name='username' value='id'>
+                            <textarea name='message'></textarea><br>
+                            <button value='commentSubmit' type='submit'>Comment</button>
+                        </form>";
 
-            }
-            else {
-                echo "Please login to comment!<br><br>";
-            }
-        getComments($conn);
-?>
+                }
+                else {
+                    echo "Please login to comment!<br><br>";
+                }?>
+        </body>
+</html>

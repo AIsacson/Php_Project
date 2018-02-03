@@ -1,0 +1,96 @@
+body {
+    color: #333;
+    font: 13px/1em "Helvetica Neue",Arial,sans-serif;
+    overflow-x: hidden;
+    background-color: #e3fceb;
+}
+body>h1 {
+    font-family: "COPPERPLATE", sans-serif;
+}
+
+.menu {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menu li {
+    float: left;
+}
+.menu ul #logout {
+    float: right;
+}
+
+.logobtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/*RECIPES bibehaller svart bg när man blaeddrar bland recepten*/
+.dropdown:hover {
+    background-color: black;
+}
+
+.logobtn:hover {
+    background-color: #333;
+}
+
+.dropbtn:hover {
+    background-color: black;
+}
+
+/*osaeker på funktion, kan inte se ngn effekt*/
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: #333;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+}

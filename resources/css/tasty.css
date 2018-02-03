@@ -1,0 +1,136 @@
+.main-wrap {
+    font: 15px/1em Georgia,Times,serif;
+    text-align: center;
+    line-height: 1.25;
+}
+
+.main-wrap a:link {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.main-wrap a:visited {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.main-wrap a:hover {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+#calendar {
+    width: 75%;
+    margin: 0 auto 0 auto;
+}
+
+#calendar ul {
+    list-style-type: none;
+}
+
+#calendar body {
+    font-family: Verdana, sans-serif;
+}
+
+/* Month header*/
+#month {
+    padding: 70px;
+    /*padding: 70px 25px;*/
+    /*width: 100%;*/
+    background: #86a86a;
+}
+
+/*Month list*/
+#month ul {
+    margin: 0;
+    padding: 0;
+}
+
+#month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* Weekdays (Mon-Sun) */
+#weekdays {
+    margin: 0;
+    padding: 10px 0px;
+    background-color: #ddd;
+}
+
+#weekdays li {
+    display: inline-block;
+    width: 13.8%;
+    color: #333;
+    text-align: center;
+}
+
+/* Days (1-31) */
+#days {
+    padding: 10px 0px 0px 5px;
+    background: #eee;
+    margin: 0;
+}
+
+#days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.744%;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#333;
+    padding-bottom: 100px;
+    border: 1px solid #eee;
+}
+
+.recipeday img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+h1 {
+    font: 36px Georgia,Times,serif;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font: 16px Georgia,Times,serif;
+    color: black;
+}
+
+.content {
+    margin: 0 0 0 30px;
+}
+
+.ingredients {
+    display: inline-block;
+}
+
+.directions {
+    display: inline-block;
+
+}
+
+.additionalcontent {
+ margin: 0 0 0 30px;
+}
+
+.comments {
+
+}
+
+.nutrition {
+
+}
+
+.author {
+    font-weight: bold;
+}
+
+

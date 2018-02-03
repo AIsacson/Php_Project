@@ -1,0 +1,49 @@
+textarea {
+    width: 400px;
+    height: 80px;
+    background-color: #fff;
+    resize: none;
+    margin-left: 20px;
+}
+button {
+    width: 80px;
+    height: 30px;
+    background-color: #77ccaa;
+    font-size: 12px;
+    border: none;
+    color: #fff;
+    font-family: Verdana, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 5px 0px 5px 20px;
+    border-radius: 6px;
+}
+.comment-box {
+    width: 400px;
+    padding: 20px;
+    margin-bottom: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-left: 20px;
+    opacity: 0.9;
+    
+}
+.comment-box p{
+   font-family: Avenir, Brown, Verdana, sans-serif;
+   font-size: 14px;
+   line-height: 16px;
+   color: #282828;
+}
+.delete-form {
+    float: right;
+}
+.delete-form button {
+    width: 30px;
+    height: 20px;
+    color: #282828;
+    background-color: #fff;
+    opacity: 0.7;
+}
+.delete-form button:hover {
+    opacity: 1;
+}

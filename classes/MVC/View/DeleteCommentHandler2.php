@@ -6,15 +6,13 @@ use Id1354fw\View\AbstractRequestHandler;
 use MVC\Util\Constants;
 
 class DeleteCommentHandler2 extends AbstractRequestHandler {
-    private $username;
-    private $cid;
-    
+
     public function setUsername() {
         $id = $this->session->get('id');
         $this->username = $id;
     }
     
-    public function setCid($cid) {
+    public function setCid() {
         if(!empty($cid)){
             $this->cid = (int) $cid;
         } else {

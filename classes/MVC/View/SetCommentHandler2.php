@@ -16,9 +16,7 @@ class SetCommentHandler2 extends AbstractRequestHandler{
     
     function setMessage($message){
         if(!empty($message)){
-            if(ctype_alnum($message)) {
-                $this->message = $message;
-            }
+            $this->message = htmlentities($message, ENT_QUOTES);
         } else {
             $this->message = NULL;
         }

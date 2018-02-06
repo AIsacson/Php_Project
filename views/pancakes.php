@@ -82,6 +82,8 @@
                 }
                 else {
                     echo "Please login to comment!<br><br>";
-                }?>
+                }
+                echo $comment;
+                ?>
         </body>
 </html>

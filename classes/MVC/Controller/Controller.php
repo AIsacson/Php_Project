@@ -30,7 +30,7 @@ class Controller {
     }
     
     function getComments($username, $select, $selectDelete) {
-        $this->commentsmodel->getComments($username, $select, $selectDelete,$this->db->connect());
+        return $this->commentsmodel->getComments($username, $select, $selectDelete,$this->db->connect());
     }
     
     function deleteComment($cid, $select){

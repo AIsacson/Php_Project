@@ -10,6 +10,7 @@ class Comments {
     }
         
     function getComments($username, $select, $selectDelete,$conn) {
+        $comments = "";
         $sql = "SELECT * FROM $select";
         $result = $conn->query($sql);
         while($row = $result->fetch_assoc()){
@@ -19,22 +20,23 @@ class Comments {
             $stmt->execute();
             $result_user = $stmt->get_result();
             if ($row_user = $result_user->fetch_assoc()) {
-                echo"<div class='comment-box'><p>";
-                echo $row_user['username'].":<br>";
-                echo nl2br($row['message']);
-                echo"</p>";
+                $comments .= "<div class='comment-box'><p>";
+                 $comments .= $row_user['username'].":<br>";
+                 $comments .= nl2br($row['message']);
+                $comments .= "</p>";
                 if(!empty($username)) {
                     if ($username === $row_user['id']) {
-                        echo "<form class='delete-form' method='POST' action='$selectDelete'>
+                         $comments .= "<form class='delete-form' method='POST' action='$selectDelete'>
                                 <input type='hidden' name= 'cid' value='".$row['cid']."'>
                                 <input type='hidden' name= 'username' value='".$row['username']."'>
                                 <button value='commentDelete' type='submit'>Delete</button>
                             </form>";                
                     }
                 }
-                echo "</div>";
+                 $comments .= "</div>";
             }
         }
+        return $comments;
     }
     
     function deleteComment($cid, $select, $conn) {
